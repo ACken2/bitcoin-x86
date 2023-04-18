@@ -352,7 +352,8 @@ void RandAddStaticEnv(CSHA512& hasher)
 #endif
 
     // Memory locations
-    hasher << &hasher << &RandAddStaticEnv << &malloc << &errno << &environ;
+    // Doesn't work for some reason
+    // hasher << &hasher << &RandAddStaticEnv << &malloc << &errno << &environ;
 
     // Hostname
     char hname[256];
