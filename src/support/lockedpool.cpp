@@ -198,14 +198,12 @@ void Win32LockedPageAllocator::FreeLocked(void* addr, size_t len)
 }
 
 size_t Win32LockedPageAllocator::GetLimit()
-{
-    // Doesn't work for some reason
-    /*
-    size_t min, max;
+{   
+    // Fixed invalid conversion from 'size_t*' to PSIZE_T error
+    unsigned long min, max;
     if(GetProcessWorkingSetSize(GetCurrentProcess(), &min, &max) != 0) {
         return min;
     }
-    */
     return std::numeric_limits<size_t>::max();
 }
 #endif
