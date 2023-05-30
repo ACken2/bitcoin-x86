@@ -1,8 +1,8 @@
 package=libevent
 $(package)_version=2.1.12-stable
-$(package)_download_path=https://github.com/libevent/libevent/releases/download/release-$($(package)_version)/
+$(package)_download_path=https://github.com/ACken2/libevent/releases/download/release-$($(package)_version)/
 $(package)_file_name=$(package)-$($(package)_version).tar.gz
-$(package)_sha256_hash=92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb
+$(package)_sha256_hash=555bf36acb05bad2c1f20305f5fc3ddaaf017e26d3bde8303b8b3de05fad8744
 
 # When building for Windows, we set _WIN32_WINNT to target the same Windows
 # version as we do in configure. Due to quirks in libevents build system, this
